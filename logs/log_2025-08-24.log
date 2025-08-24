@@ -1,0 +1,283 @@
+2025-08-24 16:51:00,891-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 16:51:02,701-INFO-Entered the data ingestion method or component
+2025-08-24 16:51:02,737-INFO-Read the dataset as dataframe
+2025-08-24 16:51:02,755-INFO-Train test split initiated
+2025-08-24 16:51:02,783-INFO-Ingestion of the data is completed
+2025-08-24 17:10:44,454-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:10:46,050-INFO-Entered the data ingestion method or component
+2025-08-24 17:10:46,066-INFO-Read the dataset as dataframe
+2025-08-24 17:10:46,088-INFO-Train test split initiated
+2025-08-24 17:10:46,106-INFO-Ingestion of the data is completed
+2025-08-24 17:14:31,389-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:14:33,212-INFO-Entered the data ingestion method or component
+2025-08-24 17:14:33,225-INFO-Read the dataset as dataframe
+2025-08-24 17:14:33,241-INFO-Train test split initiated
+2025-08-24 17:14:33,259-INFO-Ingestion of the data is completed
+2025-08-24 17:23:29,117-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:23:30,898-INFO-Entered the data ingestion method or component
+2025-08-24 17:23:30,912-INFO-Read the dataset as dataframe
+2025-08-24 17:23:30,930-INFO-Train test split initiated
+2025-08-24 17:23:30,950-INFO-Ingestion of the data is completed
+2025-08-24 17:25:47,713-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:25:49,518-INFO-Entered the data ingestion method or component
+2025-08-24 17:25:49,532-INFO-Read the dataset as dataframe
+2025-08-24 17:25:49,548-INFO-Train test split initiated
+2025-08-24 17:25:49,565-INFO-Ingestion of the data is completed
+2025-08-24 17:25:49,602-INFO-Loaded train/test for transformation: (3200, 10) / (800, 10)
+2025-08-24 17:25:49,605-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:25:49,605-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:25:49,609-INFO-Fitting preprocessor and transforming data...
+2025-08-24 17:25:56,153-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:25:57,654-INFO-Entered the data ingestion method or component
+2025-08-24 17:25:57,668-INFO-Read the dataset as dataframe
+2025-08-24 17:25:57,684-INFO-Train test split initiated
+2025-08-24 17:25:57,702-INFO-Ingestion of the data is completed
+2025-08-24 17:25:57,740-INFO-Loaded train/test for transformation: (3200, 10) / (800, 10)
+2025-08-24 17:25:57,740-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:25:57,741-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:25:57,742-INFO-Fitting preprocessor and transforming data...
+2025-08-24 17:31:44,512-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:31:45,938-INFO-Entered the data ingestion method or component
+2025-08-24 17:31:45,952-INFO-Read the dataset as dataframe
+2025-08-24 17:31:45,967-INFO-Train test split initiated
+2025-08-24 17:31:45,984-INFO-Ingestion of the data is completed
+2025-08-24 17:33:56,817-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:33:58,350-INFO-Entered the data ingestion method or component
+2025-08-24 17:33:58,369-INFO-Read the dataset as dataframe
+2025-08-24 17:33:58,388-INFO-Train test split initiated
+2025-08-24 17:33:58,407-INFO-Ingestion of the data is completed
+2025-08-24 17:39:51,397-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:43:04,856-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:43:08,550-INFO-Entered the data ingestion method or component
+2025-08-24 17:43:08,566-INFO-Read the dataset as dataframe
+2025-08-24 17:43:08,582-INFO-Train test split initiated
+2025-08-24 17:43:08,601-INFO-Ingestion of the data is completed
+2025-08-24 17:43:08,637-INFO-Loaded train/test for transformation: (3200, 10) / (800, 10)
+2025-08-24 17:43:08,638-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:43:08,639-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:43:08,641-INFO-Fitting preprocessor and transforming data...
+2025-08-24 17:44:01,368-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:44:03,711-INFO-Entered the data ingestion method or component
+2025-08-24 17:44:03,725-INFO-Read the dataset as dataframe
+2025-08-24 17:44:03,742-INFO-Train test split initiated
+2025-08-24 17:44:03,762-INFO-Ingestion of the data is completed
+2025-08-24 17:44:03,800-INFO-Loaded train/test for transformation: (3200, 10) / (800, 10)
+2025-08-24 17:44:03,801-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:44:03,802-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:44:03,805-INFO-Fitting preprocessor and transforming data...
+2025-08-24 17:47:01,079-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:47:03,663-INFO-Entered the data ingestion method or component
+2025-08-24 17:47:03,681-INFO-Read the dataset as dataframe
+2025-08-24 17:47:03,701-INFO-Train test split initiated
+2025-08-24 17:47:03,722-INFO-Ingestion of the data is completed
+2025-08-24 17:47:03,766-INFO-Loaded train/test for transformation: (3200, 10) / (800, 10)
+2025-08-24 17:47:03,768-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:47:03,768-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:47:03,770-INFO-Fitting preprocessor and transforming data...
+2025-08-24 17:51:50,273-INFO-NumExpr defaulting to 8 threads.
+2025-08-24 17:55:46,591-INFO-Entered data ingestion.
+2025-08-24 17:55:46,608-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 17:55:46,626-INFO-Performing 80/20 train-test split...
+2025-08-24 17:55:46,648-INFO-Data ingestion completed.
+2025-08-24 17:55:46,687-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 17:55:46,688-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:55:46,688-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:55:46,691-INFO-Fitting preprocessor and transforming data...
+2025-08-24 17:57:08,554-INFO-Entered data ingestion.
+2025-08-24 17:57:08,570-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 17:57:08,588-INFO-Performing 80/20 train-test split...
+2025-08-24 17:57:08,608-INFO-Data ingestion completed.
+2025-08-24 17:57:08,652-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 17:57:08,653-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 17:57:08,654-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 17:57:08,655-INFO-Fitting preprocessor and transforming data...
+2025-08-24 18:01:03,011-INFO-Entered data ingestion.
+2025-08-24 18:01:03,027-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 18:01:03,045-INFO-Performing 80/20 train-test split...
+2025-08-24 18:01:03,065-INFO-Data ingestion completed.
+2025-08-24 18:01:03,111-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 18:01:03,112-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 18:01:03,113-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 18:01:03,115-INFO-Fitting preprocessor and transforming data...
+2025-08-24 18:01:26,790-INFO-Entered data ingestion.
+2025-08-24 18:01:26,806-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 18:01:26,824-INFO-Performing 80/20 train-test split...
+2025-08-24 18:01:26,844-INFO-Data ingestion completed.
+2025-08-24 18:01:26,884-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 18:01:26,885-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 18:01:26,885-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 18:01:26,889-INFO-Fitting preprocessor and transforming data...
+2025-08-24 18:10:01,273-INFO-Entered data ingestion.
+2025-08-24 18:10:01,291-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 18:10:01,310-INFO-Performing 80/20 train-test split...
+2025-08-24 18:10:01,332-INFO-Data ingestion completed.
+2025-08-24 18:10:01,372-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 18:10:01,373-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 18:10:01,374-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 18:10:01,376-INFO-Fitting preprocessor and transforming data...
+2025-08-24 18:10:01,454-INFO-Transformed shapes -> X_train: (3200, 3281), y_train: (3200,) | X_test: (800, 3281), y_test: (800,)
+2025-08-24 18:10:01,522-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 18:10:01,536-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 18:10:01,537-INFO-Evaluating candidate models...
+2025-08-24 18:16:00,848-INFO-Entered data ingestion.
+2025-08-24 18:16:00,862-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 18:16:00,878-INFO-Performing 80/20 train-test split...
+2025-08-24 18:16:00,896-INFO-Data ingestion completed.
+2025-08-24 18:16:00,931-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 18:16:00,932-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 18:16:00,933-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 18:16:00,935-INFO-Fitting preprocessor and transforming data...
+2025-08-24 18:16:00,999-INFO-Transformed shapes -> X_train: (3200, 3281), y_train: (3200,) | X_test: (800, 3281), y_test: (800,)
+2025-08-24 18:16:01,061-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 18:16:01,071-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 18:16:01,072-INFO-Evaluating candidate models...
+2025-08-24 18:33:56,295-INFO-Entered data ingestion.
+2025-08-24 18:33:56,312-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 18:33:56,332-INFO-Performing 80/20 train-test split...
+2025-08-24 18:33:56,355-INFO-Data ingestion completed.
+2025-08-24 18:33:56,396-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 18:33:56,398-INFO-Numerical features: ['Protein_Content(g)']
+2025-08-24 18:33:56,398-INFO-Categorical features: ['Meal_ID', 'Dish_Name', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 18:33:56,400-INFO-Fitting preprocessor and transforming data...
+2025-08-24 18:33:56,472-INFO-Transformed shapes -> X_train: (3200, 3281), y_train: (3200,) | X_test: (800, 3281), y_test: (800,)
+2025-08-24 18:33:56,541-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 18:33:56,552-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 18:33:56,553-INFO-Evaluating candidate models...
+2025-08-24 19:18:53,334-INFO-Best model: XGBRegressor | R² = -0.0026
+2025-08-24 19:27:03,559-INFO-Entered data ingestion.
+2025-08-24 19:27:03,577-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 19:27:03,596-INFO-Performing 80/20 train-test split...
+2025-08-24 19:27:03,618-INFO-Data ingestion completed.
+2025-08-24 19:27:03,664-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 19:27:03,665-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 19:27:03,666-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 19:27:03,668-INFO-Fitting preprocessor and transforming data...
+2025-08-24 19:27:03,737-INFO-Transformed shapes -> X_train: (3200, 3252), y_train: (3200,) | X_test: (800, 3252), y_test: (800,)
+2025-08-24 19:27:04,175-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 19:27:04,187-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 19:27:04,188-INFO-Evaluating candidate models...
+2025-08-24 19:29:26,559-INFO-Entered data ingestion.
+2025-08-24 19:29:26,575-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 19:29:26,594-INFO-Performing 80/20 train-test split...
+2025-08-24 19:29:26,615-INFO-Data ingestion completed.
+2025-08-24 19:29:26,660-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 19:29:26,662-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 19:29:26,662-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 19:29:26,666-INFO-Fitting preprocessor and transforming data...
+2025-08-24 19:29:26,817-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 19:29:26,818-INFO-Saved label encoder to artifacts\label_encoder.pkl
+2025-08-24 19:29:26,819-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 19:29:26,819-INFO-Evaluating candidate models...
+2025-08-24 19:44:31,649-INFO-Entered data ingestion.
+2025-08-24 19:44:31,668-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 19:44:31,688-INFO-Performing 80/20 train-test split...
+2025-08-24 19:44:31,711-INFO-Data ingestion completed.
+2025-08-24 19:44:31,764-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 19:44:31,765-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 19:44:31,765-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 19:44:31,769-INFO-Fitting preprocessor and transforming data...
+2025-08-24 19:44:31,930-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 19:44:31,931-INFO-Saved label encoder to artifacts\label_encoder.pkl
+2025-08-24 19:44:31,932-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 19:44:31,933-INFO-Evaluating candidate models...
+2025-08-24 20:36:04,940-INFO-Entered data ingestion.
+2025-08-24 20:36:04,956-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 20:36:04,973-INFO-Performing 80/20 train-test split...
+2025-08-24 20:36:04,994-INFO-Data ingestion completed.
+2025-08-24 20:36:05,039-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 20:36:05,040-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 20:36:05,041-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 20:36:05,046-INFO-Fitting preprocessor and transforming data...
+2025-08-24 20:36:05,194-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 20:36:05,194-INFO-Saved label encoder to artifacts\label_encoder.pkl
+2025-08-24 20:36:05,195-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 20:36:05,195-INFO-Evaluating candidate models...
+2025-08-24 20:38:07,052-INFO-Entered data ingestion.
+2025-08-24 20:38:07,069-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 20:38:07,090-INFO-Performing 80/20 train-test split...
+2025-08-24 20:38:07,114-INFO-Data ingestion completed.
+2025-08-24 20:38:07,161-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 20:38:07,163-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 20:38:07,163-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 20:38:07,167-INFO-Fitting preprocessor and transforming data...
+2025-08-24 20:38:07,322-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 20:38:07,322-INFO-Saved label encoder to artifacts\label_encoder.pkl
+2025-08-24 20:38:07,323-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 20:38:07,324-INFO-Evaluating candidate models...
+2025-08-24 20:43:54,167-INFO-Entered data ingestion.
+2025-08-24 20:43:54,186-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 20:43:54,206-INFO-Performing 80/20 train-test split...
+2025-08-24 20:43:54,227-INFO-Data ingestion completed.
+2025-08-24 20:43:54,274-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 20:43:54,275-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 20:43:54,275-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 20:43:54,278-INFO-Fitting preprocessor and transforming data...
+2025-08-24 20:43:54,430-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 20:43:54,430-INFO-Saved label encoder to artifacts\label_encoder.pkl
+2025-08-24 20:43:54,430-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 20:43:54,431-INFO-Evaluating candidate models...
+2025-08-24 20:53:13,053-INFO-Entered data ingestion.
+2025-08-24 20:53:13,078-INFO-Read dataset: shape=(4000, 10)
+2025-08-24 20:53:13,097-INFO-Performing 80/20 train-test split...
+2025-08-24 20:53:13,116-INFO-Data ingestion completed.
+2025-08-24 20:53:13,155-INFO-Loaded train/test: (3200, 10) / (800, 10)
+2025-08-24 20:53:13,156-INFO-Numerical features: ['Calories_per_Serving', 'Protein_Content(g)']
+2025-08-24 20:53:13,157-INFO-Categorical features: ['Meal_ID', 'Cuisine_Type', 'Meal_Type', 'Dietary_Preference', 'Main_Ingredients', 'Difficulty_Level', 'Occasion_Type']
+2025-08-24 20:53:13,161-INFO-Fitting preprocessor and transforming data...
+2025-08-24 20:53:13,294-INFO-Saved preprocessor to artifacts\preprocessor.pkl
+2025-08-24 20:53:13,294-INFO-Saved label encoder to artifacts\label_encoder.pkl
+2025-08-24 20:53:13,295-INFO-Splitting arrays into X/y for training and testing...
+2025-08-24 20:53:13,295-INFO-\U0001f504 Training Decision Tree...
+2025-08-24 20:53:24,080-INFO-\u2705 Decision Tree finished | Accuracy = 1.0000
+2025-08-24 20:53:24,081-INFO-\U0001f504 Training Random Forest...
+2025-08-24 20:53:40,362-INFO-\u2705 Random Forest finished | Accuracy = 1.0000
+2025-08-24 20:53:40,363-INFO-Best model: Decision Tree | Accuracy = 1.0000
+2025-08-24 20:53:40,365-INFO-Saved best model (Decision Tree) to artifacts\model.pkl
+2025-08-24 20:53:59,958-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 20:53:59,958-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 20:57:11,545-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 20:57:11,546-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 20:59:48,916-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 20:59:48,918-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:05:51,783-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:05:51,784-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:10:02,015-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:10:02,016-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:13:39,440-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:13:39,441-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:21:19,724-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:21:19,726-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:21:19,727-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:21:19,728-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:30:22,785-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:30:22,786-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:38:33,433-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:38:33,437-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:38:33,438-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:38:33,440-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:40:17,431-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:40:17,432-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:41:04,236-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:41:04,239-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 21:46:02,851-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-24 21:46:02,853-INFO-[33mPress CTRL+C to quit[0m
+2025-08-24 23:59:29,472-INFO-Starting prediction...
+2025-08-24 23:59:29,477-INFO-Aligned input features to match training data structure.
+2025-08-24 23:59:47,876-INFO-Starting prediction...
+2025-08-24 23:59:47,885-INFO-Aligned input features to match training data structure.
+2025-08-25 00:00:11,380-INFO-Starting prediction...
+2025-08-25 00:00:11,390-INFO-Aligned input features to match training data structure.
