@@ -143,7 +143,7 @@ nutri_df = load_data()
 
 if nutri_df is not None:
     # --- App Title and Header ---
-    st.title("🍲 NutriPlan AI - Smart Dish Recommender")
+    st.title("🍲 NutriPlan AI - Smart Dish Recommender(Indian and Chinese)")
     st.markdown("### Your personal guide to healthy and delicious meals.")
 
     # --- Input Form Section ---
