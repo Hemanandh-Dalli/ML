@@ -4,23 +4,26 @@ import sys
 import os
 from pathlib import Path
 
-# --- Path Setup ---
-# This setup ensures that the script can correctly locate and import necessary modules
-# from your project structure (e.g., PredictPipeline, CustomException).
+# --- Path Setup (FIXED) ---
+# This corrected logic adds the 'src' directory to the system path,
+# which allows for direct imports from its subdirectories.
 try:
-    # Attempt to set the project root assuming the script is in a 'src' or similar folder.
-    project_root = Path(__file__).resolve().parents[1]
-    if str(project_root) not in sys.path:
-        sys.path.insert(0, str(project_root))
+    # The directory containing this app.py file
+    app_dir = Path(__file__).resolve().parent
+    # The path to the 'src' directory
+    src_path = app_dir / "src"
+    
+    # Add the 'src' directory to the system path
+    if str(src_path) not in sys.path:
+        sys.path.append(str(src_path))
 
-    from src.Pipeline.predict_pipeline import PredictPipeline
-    from src.exception import CustomException
-
-except (ImportError, IndexError):
-    # Fallback for environments where the structure might be different.
-    st.warning("Could not set project root automatically. Assuming a flattened project structure.")
+    # Now that 'src' is on the path, we can import from its subdirectories
     from Pipeline.predict_pipeline import PredictPipeline
     from exception import CustomException
+
+except ImportError as e:
+    st.error(f"Import Error: {e}. Please ensure your project structure is correct. The app expects an 'src' directory with a 'Pipeline' subdirectory in the same folder as app.py.")
+    st.stop()
 
 
 # --- Custom CSS for Styling ---
@@ -51,7 +54,7 @@ st.markdown("""
     h1, h2, h3, h4 {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: bold;
-        color: White !important; /* Black for main headings */
+        color: white !important; /* Black for main headings */
         text-align: center;
     }
 
@@ -66,7 +69,7 @@ st.markdown("""
     .section-box h2 {
         font-size: 1.75rem;
         margin-bottom: 1.5rem;
-        color: white !important; /* Black for section titles */
+        color: #000000 !important; /* Black for section titles */
     }
 
     /* Button styling */
@@ -94,14 +97,15 @@ st.markdown("""
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     
-    /* Custom style for success messages (dish names) */
-    .stSuccess {
+    /* Custom style for result cards */
+    .result-card {
         background-color: #ffe0b2; /* Lighter orange to match section box */
         border-left: 5px solid #ff9800; /* Amber border */
         border-radius: 5px;
         padding: 1rem;
+        margin-bottom: 1rem; /* Space between cards */
     }
-    .stSuccess p, .stSuccess strong {
+    .result-card p, .result-card strong {
         color: #000000 !important; /* Black text for dish names */
     }
 </style>
@@ -131,8 +135,10 @@ def get_unique_ingredients(df):
 # --- Initialize Session State ---
 if 'recommendations' not in st.session_state:
     st.session_state.recommendations = None
-if 'user_input' not in st.session_state:
-    st.session_state.user_input = None
+if 'user_input_display' not in st.session_state:
+    st.session_state.user_input_display = None
+if 'last_inputs' not in st.session_state:
+    st.session_state.last_inputs = {}
 
 
 # Load the main dataset
@@ -179,6 +185,21 @@ if nutri_df is not None:
         )
 
         st.markdown('</div>', unsafe_allow_html=True)
+    
+    # --- FIX: State Management Logic ---
+    # Create a dictionary of the current inputs to detect changes
+    current_inputs = {
+        "cuisine": cuisine, "meal_type": meal_type, "difficulty": difficulty,
+        "occasion": occasion, "diet": diet, "ingredients": ingredients_str,
+        "calories": calorie_range
+    }
+    
+    # If inputs have changed since the last prediction, clear the old recommendations
+    if current_inputs != st.session_state.last_inputs:
+        st.session_state.recommendations = None
+        st.session_state.user_input_display = None
+    # --- END FIX ---
+
 
     # --- Prediction Logic ---
     if st.button("🍽️ Suggest Dishes"):
@@ -186,20 +207,23 @@ if nutri_df is not None:
             st.warning("Please select at least one ingredient.")
         else:
             try:
+                # Store user input for display and update last_inputs state
+                st.session_state.user_input_display = {
+                    "Cuisine Type": cuisine, "Meal Type": meal_type, "Dietary Preference": diet,
+                    "Ingredients": ingredients_str, "Difficulty": difficulty, "Occasion": occasion,
+                    "Calorie Range": f"{calorie_range[0]} - {calorie_range[1]} kcal"
+                }
+                st.session_state.last_inputs = current_inputs
+
+                # Prepare input data for the model
                 input_data = {
-                    "Meal_ID": "dummy_id",
-                    "Cuisine_Type": cuisine,
-                    "Meal_Type": meal_type,
-                    "Dietary_Preference": diet,
-                    "Main_Ingredients": ingredients_str,
-                    "Difficulty_Level": difficulty,
-                    "Occasion_Type": occasion,
-                    "Calories_per_Serving": 0,
-                    "Protein_Content(g)": 0,
+                    "Meal_ID": "dummy_id", "Cuisine_Type": cuisine, "Meal_Type": meal_type,
+                    "Dietary_Preference": diet, "Main_Ingredients": ingredients_str,
+                    "Difficulty_Level": difficulty, "Occasion_Type": occasion,
+                    "Calories_per_Serving": 0, "Protein_Content(g)": 0,
                 }
                 input_df = pd.DataFrame([input_data])
                 
-                st.session_state.user_input = input_df
                 pipeline = PredictPipeline()
                 results = pipeline.predict(input_df, top_k=20)
                 
@@ -224,9 +248,14 @@ if nutri_df is not None:
                 st.session_state.recommendations = None
 
     # --- Display Results Section ---
-    if st.session_state.user_input is not None:
+    if st.session_state.user_input_display:
         st.subheader("📋 Your Preferences")
-        st.dataframe(st.session_state.user_input)
+        with st.container():
+            st.markdown('<div class="result-card">', unsafe_allow_html=True)
+            for key, value in st.session_state.user_input_display.items():
+                st.markdown(f"**{key}:** {value}")
+            st.markdown('</div>', unsafe_allow_html=True)
+
 
     if st.session_state.recommendations is not None:
         st.subheader("🍛 Top Dish Suggestions")
@@ -235,8 +264,15 @@ if nutri_df is not None:
         if recommendations.empty:
             st.info("No suggestions found for your criteria. Try adjusting the filters.")
         else:
-            for dish_name in recommendations['Dish_Name']:
-                st.success(f"**{dish_name}**")
+            for index, row in recommendations.iterrows():
+                dish_details = nutri_df[nutri_df['Dish_Name'] == row['Dish_Name']].iloc[0]
+                with st.container():
+                    st.markdown('<div class="result-card">', unsafe_allow_html=True)
+                    st.markdown(f"<h4>{dish_details['Dish_Name']}</h4>", unsafe_allow_html=True)
+                    st.markdown(f"**Calories:** {dish_details['Calories_per_Serving']} kcal")
+                    st.markdown(f"**Cuisine:** {dish_details['Cuisine_Type']}")
+                    st.markdown(f"**Ingredients:** {dish_details['Main_Ingredients']}")
+                    st.markdown('</div>', unsafe_allow_html=True)
 
             st.markdown("---")
             st.subheader("💪 Want a More Indulgent Option?")
@@ -263,9 +299,12 @@ if nutri_df is not None:
 
                 if not alternatives_df.empty:
                     highest_calorie_alt = alternatives_df.sort_values(by='Calories_per_Serving', ascending=False).iloc[0]
-                    st.success(f"**Alternative Suggestion:** {highest_calorie_alt['Dish_Name']}")
-                    st.write(f"**Calories:** {highest_calorie_alt['Calories_per_Serving']} kcal (Original was {original_calories} kcal)")
-                    st.write(f"**Cuisine:** {highest_calorie_alt['Cuisine_Type']}")
-                    st.write(f"**Ingredients:** {highest_calorie_alt['Main_Ingredients']}")
+                    with st.container():
+                        st.markdown('<div class="result-card">', unsafe_allow_html=True)
+                        st.markdown(f"**Alternative Suggestion:** {highest_calorie_alt['Dish_Name']}")
+                        st.markdown(f"**Calories:** {highest_calorie_alt['Calories_per_Serving']} kcal (Original was {original_calories} kcal)")
+                        st.markdown(f"**Cuisine:** {highest_calorie_alt['Cuisine_Type']}")
+                        st.markdown(f"**Ingredients:** {highest_calorie_alt['Main_Ingredients']}")
+                        st.markdown('</div>', unsafe_allow_html=True)
                 else:
                     st.info("No higher-calorie alternative with similar ingredients was found in the dataset.")
