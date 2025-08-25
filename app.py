@@ -4,25 +4,22 @@ import sys
 import os
 from pathlib import Path
 
-# --- Path Setup (FIXED) ---
-# This corrected logic adds the 'src' directory to the system path,
-# which allows for direct imports from its subdirectories.
+# --- Path Setup (FIXED for Deployment) ---
+# This logic correctly finds the project's root directory and adds it to the
+# system path, allowing for absolute imports from the 'src' package.
 try:
-    # The directory containing this app.py file
-    app_dir = Path(__file__).resolve().parent
-    # The path to the 'src' directory
-    src_path = app_dir / "src"
-    
-    # Add the 'src' directory to the system path
-    if str(src_path) not in sys.path:
-        sys.path.append(str(src_path))
+    # Get the absolute path of the directory containing app.py (the project root)
+    project_root = Path(__file__).resolve().parent
+    # Add the project root to the system path
+    if str(project_root) not in sys.path:
+        sys.path.append(str(project_root))
 
-    # Now that 'src' is on the path, we can import from its subdirectories
-    from Pipeline.predict_pipeline import PredictPipeline
-    from exception import CustomException
+    # Now, perform absolute imports from the 'src' package
+    from src.Pipeline.predict_pipeline import PredictPipeline
+    from src.exception import CustomException
 
 except ImportError as e:
-    st.error(f"Import Error: {e}. Please ensure your project structure is correct. The app expects an 'src' directory with a 'Pipeline' subdirectory in the same folder as app.py.")
+    st.error(f"Import Error: {e}. Please ensure your project structure is correct. The app expects an 'src' directory in the same folder as app.py, containing your modules.")
     st.stop()
 
 
@@ -186,19 +183,16 @@ if nutri_df is not None:
 
         st.markdown('</div>', unsafe_allow_html=True)
     
-    # --- FIX: State Management Logic ---
-    # Create a dictionary of the current inputs to detect changes
+    # --- State Management Logic ---
     current_inputs = {
         "cuisine": cuisine, "meal_type": meal_type, "difficulty": difficulty,
         "occasion": occasion, "diet": diet, "ingredients": ingredients_str,
         "calories": calorie_range
     }
     
-    # If inputs have changed since the last prediction, clear the old recommendations
     if current_inputs != st.session_state.last_inputs:
         st.session_state.recommendations = None
         st.session_state.user_input_display = None
-    # --- END FIX ---
 
 
     # --- Prediction Logic ---
@@ -207,7 +201,6 @@ if nutri_df is not None:
             st.warning("Please select at least one ingredient.")
         else:
             try:
-                # Store user input for display and update last_inputs state
                 st.session_state.user_input_display = {
                     "Cuisine Type": cuisine, "Meal Type": meal_type, "Dietary Preference": diet,
                     "Ingredients": ingredients_str, "Difficulty": difficulty, "Occasion": occasion,
@@ -215,7 +208,6 @@ if nutri_df is not None:
                 }
                 st.session_state.last_inputs = current_inputs
 
-                # Prepare input data for the model
                 input_data = {
                     "Meal_ID": "dummy_id", "Cuisine_Type": cuisine, "Meal_Type": meal_type,
                     "Dietary_Preference": diet, "Main_Ingredients": ingredients_str,
